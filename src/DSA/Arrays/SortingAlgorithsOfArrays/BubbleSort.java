@@ -16,9 +16,9 @@ public class BubbleSort
         }
         for (int i = 0; i < intArray.length; i++)
         {
-            for(int j = i+1; j < intArray.length-1; j++)
+            for(int j = i; j < intArray.length; j++)
             {
-                if(intArray[i]>=intArray[j])
+                if(intArray[i]>intArray[j])             //use greater than or equals
                 {
                     int holder = intArray[i];
                     intArray[i] = intArray[j];
