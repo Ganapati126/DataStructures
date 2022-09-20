@@ -1,7 +1,6 @@
 package DSA.Arrays.SortingAlgorithsOfArrays;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class BubbleSort
@@ -14,15 +13,17 @@ public class BubbleSort
         {
             intArray[i] = sc.nextInt();
         }
-        for (int i = 0; i < intArray.length; i++)
+        int stepCounter = 0;
+        for (int i = 0; i < intArray.length-1; i++)
         {
-            for(int j = i; j < intArray.length; j++)
+            for(int j = intArray.length-1; j > i; j--)
             {
-                if(intArray[i]>intArray[j])             //use greater than or equals
+                if(intArray[i]>intArray[j])
                 {
                     int holder = intArray[i];
                     intArray[i] = intArray[j];
                     intArray[j] = holder;
+                    stepCounter++;
                 }
             }
         }
@@ -32,5 +33,6 @@ public class BubbleSort
             s = s + " "+ String.valueOf(intArray[i]);
         }
         System.out.println(s);
+        System.out.println(stepCounter);
     }
 }
