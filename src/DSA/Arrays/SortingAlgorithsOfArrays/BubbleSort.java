@@ -14,16 +14,18 @@ public class BubbleSort
             intArray[i] = sc.nextInt();
         }
         int stepCounter = 0;
+        int stepCounter2 = 0;
         for (int i = 0; i < intArray.length-1; i++)
         {
             for(int j = intArray.length-1; j > i; j--)
             {
+                stepCounter++;
                 if(intArray[i]>intArray[j])
                 {
                     int holder = intArray[i];
                     intArray[i] = intArray[j];
                     intArray[j] = holder;
-                    stepCounter++;
+                    stepCounter2++;
                 }
             }
         }
@@ -34,5 +36,6 @@ public class BubbleSort
         }
         System.out.println(s);
         System.out.println(stepCounter);
+        System.out.println(stepCounter2);
     }
 }
